@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import SwipeCard from "./components/SwipeCard";
-import profilesData from "./json/profiles.json"; // Import JSON file
+import SwipeMatch from "./components/SwipeMatch";
+import Home from "./components/Home";
+import Profile from "./pages/SignUp";
+
+import profilesData from "./json/profiles.json";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./App.css";
 
 const App = () => {
@@ -12,13 +17,16 @@ const App = () => {
   };
 
   return (
+    <BrowserRouter>
     <div className="container">
-      {profilesQueue.length > 0 ? (
-        <SwipeCard profile={profilesQueue[0]} onSwipe={handleSwipe} />
-      ) : (
-        <h2>No more profiles</h2>
-      )}
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/swipe-match" element={<SwipeMatch />} />
+        </Routes>
     </div>
+    </BrowserRouter>
   );
 };
 

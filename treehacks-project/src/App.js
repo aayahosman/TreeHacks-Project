@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import SwipeCard from "./components/SwipeCard";
+import profilesData from "./json/profiles.json"; // Import JSON file
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [profilesQueue, setProfilesQueue] = useState(profilesData);
+
+  const handleSwipe = (id, direction) => {
+    console.log(`${profilesQueue[0].name} swiped ${direction}`);
+    setProfilesQueue((prevQueue) => prevQueue.slice(1));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {profilesQueue.length > 0 ? (
+        <SwipeCard profile={profilesQueue[0]} onSwipe={handleSwipe} />
+      ) : (
+        <h2>No more profiles</h2>
+      )}
     </div>
   );
-}
+};
 
 export default App;

@@ -1,8 +1,20 @@
+/* New home container styling */
+/* .home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+} */
+
+/* Existing styles */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Figtree, sans-serif;
 }
 
 body {
@@ -21,6 +33,54 @@ a:hover {
   text-decoration: underline;
 }
 
+/* home */
+/* .header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+} */
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F3BDFF;
+  padding: 10px 20px;
+  border-radius: 999px;
+  gap: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border: 1px solid black;
+}
+
+.navbar h1 {
+  font-size: 120px; /* Increased font size */
+  margin-right: 100px;
+}
+
+.navbar h3 {
+  font-size: 40px; /* Increased font size */
+}
+
+.home-btn {
+  background-color: #F3BDFF;
+  color: black;
+  padding: 10px 20px;
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto; /* Centers the button */
+  display: block; /* Ensures margin auto works for centering */
+  font-size: 15px; /* Makes the button text bigger */
+}
+
+/* swiping */
 .container {
   display: flex;
   justify-content: center;

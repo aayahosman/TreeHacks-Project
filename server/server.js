@@ -1,7 +1,7 @@
 require('dotenv').config();
 console.log("MONGO_URI from .env:", process.env.MONGO_URI); // Debugging line
 const express = require('express');
-const connectDB = require('./config/db'); // Corrected path
+const connectDB = require('./config/db'); 
 
 const app = express();
 app.use(express.json());

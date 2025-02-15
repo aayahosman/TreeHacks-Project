@@ -1,13 +1,13 @@
-const redis = require('redis');
-require('dotenv').config();
+// const redis = require('redis');
+// require('dotenv').config();
 
-const client = redis.createClient({
-    url: process.env.REDIS_URI || 'redis://localhost:6379' 
-});
+// const client = redis.createClient({
+//     url: process.env.REDIS_URI || 'redis://localhost:6379' 
+// });
 
-client.on('connect', () => console.log('✅ Redis connected'));
-client.on('error', (err) => console.error('❌ Redis error:', err));
+// client.on('connect', () => console.log('✅ Redis connected'));
+// client.on('error', (err) => console.error('❌ Redis error:', err));
 
-client.connect();
+// client.connect();
 
-module.exports = client;
+// module.exports = client;

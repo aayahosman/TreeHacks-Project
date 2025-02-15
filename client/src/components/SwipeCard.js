@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 const SwipeCard = ({ profile, onSwipe }) => {

@@ -4,12 +4,8 @@ import SwipeMatch from "./components/SwipeMatch";
 import Home from "./components/Home";
 import Login from "./components/Login.jsx";
 import Profile from "./pages/SignUp";
-
 import profilesData from "./json/profiles.json";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import "./App.css";
-import "./Login.css";
-
 
 const App = () => {
   const [profilesQueue, setProfilesQueue] = useState(profilesData);

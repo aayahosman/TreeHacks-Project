@@ -1,0 +1,95 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap');
+
+/* Ensure the login container takes full screen and is balanced */
+.loginContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #fce3ff, #ffe6e6); /* Keep your original gradient */
+  padding: 0;
+}
+
+/* Left Section - Login Form */
+.loginSection {
+  width: 50%; /* Adjust width for better balance */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login Form */
+.loginForm {
+  width: 100%;
+  max-width: 320px; /* Ensures consistent width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input fields */
+.inputField {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Login button */
+.loginButton {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.loginButton:hover {
+  background-color: #333;
+}
+
+/* Social icons */
+.socialIcons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcons img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Right Section - Illustration (Fully Moved to the Far Right) */
+.illustrationSection {
+  width: 50%;
+  height: 100%;
+  background-color: #dab6fc; /* Keep your original purple shade */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 20px;
+  position: absolute;
+  right: 0; /* Forces it to align all the way to the right */
+  top: 0;
+  bottom: 0;
+}
+
+.illustration {
+  width: 85%; /* Adjust size to be proportional */
+  max-width: 350px;
+}

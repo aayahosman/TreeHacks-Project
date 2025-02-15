@@ -8,4 +8,3 @@ const SwipeSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Swipe', SwipeSchema);
-

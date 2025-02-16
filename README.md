@@ -43,7 +43,7 @@ We integrated **Zoom’s API** to facilitate **real-time mentorship sessions, gr
 - **Idea Brainstorming:** Helped us refine our **user experience (UX) and feature design**.
 - Help with **swiping and matching** profiles 
 
-### **🛠️ Codegen **  
+### 🛠️ Codegen 
 🏆 Using **developer tools & AI** for:  
 - Improved **code efficiency**  
 - Advanced **static analysis & UI enhancements**  

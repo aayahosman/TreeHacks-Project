@@ -12,7 +12,7 @@ const Home = () => {
       <div className="home-content">
         <h1 className="home-title">Meet your peers & mentors :)</h1>
         <h3 className="home-subtitle">Empowering women through education, mentorship, and community.</h3>
-        <button className="home-btn" onClick={() => navigate("/swipe-match")}>
+        <button className="home-btn" onClick={() => navigate("/login")}>
           Find Your Match
         </button>
       </div>

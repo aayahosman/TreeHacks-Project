@@ -1,7 +1,16 @@
-const express = require('express');
+// const express = require('express');
+// const router = express.Router();
+// const usercontroller = require('../controllers/usercontroller');
+
+// router.get('/', usercontroller.getUsers);
+
+// module.exports = router;
+
+import express from 'express';
 const router = express.Router();
-const usercontroller = require('../controllers/usercontroller');
 
-router.get('/', usercontroller.getUsers);
+router.get('/', (req, res) => {
+    res.send('User route works!');
+});
 
-module.exports = router;
+export default router;

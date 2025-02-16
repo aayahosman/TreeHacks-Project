@@ -1,0 +1,200 @@
+/* Reset Global Centering ONLY for Messages Page */
+.messages-container {
+    display: flex !important; /* Force correct flexbox layout */
+    flex-direction: row;
+    align-items: stretch; /* Prevents centering */
+    justify-content: space-between; /* Ensures proper spacing */
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+  }
+  
+  /* SIDEBAR (Friends List) */
+  .sidebar {
+    width: 25%;
+    background: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #ddd;
+  }
+  
+  .sidebar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: #f3bdff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .search-icon {
+    color: black;
+    margin-right: 8px;
+  }
+  
+  .search-box input {
+    border: none;
+    background: none;
+    outline: none;
+    flex-grow: 1;
+  }
+  
+  /* FRIENDS LIST */
+  .friends-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .friend {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .friend:hover {
+    background: #f3bdff;
+  }
+  
+  .friend img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  /* CHAT SECTION */
+  .chat-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  /* Chat Header */
+  .chat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .chat-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* CHAT WINDOW */
+  .chat-window {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    overflow-y: auto;
+    gap: 10px;
+  }
+  
+  /* MESSAGES */
+  .message {
+    max-width: 60%;
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+    word-wrap: break-word;
+  }
+  
+  /* Align received messages to the left */
+  .message.received {
+    background: #f3bdff;
+    align-self: flex-start;
+    text-align: left;
+  }
+  
+  /* Align sent messages to the right */
+  .message.sent {
+    background: #e0e0e0;
+    align-self: flex-end;
+    text-align: right;
+  }
+  
+  /* Large messages take up more space */
+  .message.large {
+    max-width: 75%;
+  }
+  
+  /* CHAT INPUT */
+  .chat-input {
+    display: flex;
+    gap: 10px;
+    border-top: 2px solid #ddd;
+    padding: 10px;
+    align-items: center;
+  }
+  
+  .chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .send-btn {
+    background: #f3bdff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .send-btn:hover {
+    background: #e0aaff;
+  }
+  
+  /* USER INFO (Hidden Until Profile Clicked) */
+  .user-info {
+    width: 25%;
+    padding: 20px;
+    background: #fff;
+    border-left: 2px solid #ddd;
+    display: none; /* Hide by default */
+  }
+  
+  .user-info.active {
+    display: flex; /* Show when a profile is clicked */
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Profile Image */
+  .user-avatar {
+    width: 80px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .user-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .user-options details {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  

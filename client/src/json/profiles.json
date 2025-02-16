@@ -16,9 +16,30 @@
     {
       "id": 3,
       "name": "Charlie",
-      "preference": "Travel",
+      "preference": "Math",
       "bio": "Exploring new places and cultures is my passion.",
       "image": "images/cat3.png"
-    }
+    },
+    {
+        "id": 4,
+        "name": "Steven",
+        "preference": "Computer Science",
+        "bio": "Exploring new places and cultures is my passion.",
+        "image": "images/cat3.png"
+      },
+      {
+        "id": 5,
+        "name": "Kyle",
+        "preference": "Computer Science",
+        "bio": "Exploring new places and cultures is my passion.",
+        "image": "images/cat3.png"
+      },
+      {
+        "id": 6,
+        "name": "Michael",
+        "preference": "Computer Science",
+        "bio": "Exploring new places and cultures is my passion.",
+        "image": "images/cat3.png"
+      }
   ]
   

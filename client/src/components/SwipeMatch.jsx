@@ -5,6 +5,7 @@ import SwipeCard from "./SwipeCard";
 import profilesData from "../json/profiles.json";
 import "../App.css";
 import NavBar from "./NavBar";
+import Matched from "./Matched";
 
 const SwipeMatch = () => {
   const [profilesQueue, setProfilesQueue] = useState(profilesData);

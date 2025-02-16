@@ -9,33 +9,39 @@
   font-family: Figtree, sans-serif;
 }
 
-/* ✅ Only apply centering to Home and Swipe Match */
 body, html {
   height: 100%;
   width: 100%;
-  background: #fff; /* Keep a neutral background for other pages */
-}
-
-/* ✅ Center Home Page */
-.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100vh;
-  width: 100vw;
+  background: linear-gradient(180deg, #fce3ff 30%, #ffe6e6 70%);
+}
+
+/* ✅ Center Home Page */
+.home-container {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
   background: linear-gradient(180deg, #fce3ff 30%, #ffe6e6 70%);
 }
 
 /* ✅ Center Swipe Match Page */
 .swipe-container {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   background: linear-gradient(180deg, #fce3ff 30%, #ffe6e6 70%);
 }
@@ -77,8 +83,8 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   text-align: center;
 }
 

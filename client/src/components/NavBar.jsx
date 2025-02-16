@@ -22,7 +22,7 @@ function NavBar() {
 
   return (
     <nav className="navbar">
-      <FaCommentDots style={{ fontSize: "24px", cursor: "pointer" }} />
+      <FaCommentDots style={{ fontSize: "24px", cursor: "pointer" }} onClick={() => navigate("/messages")}/>
       <FaBell style={{ fontSize: "24px", cursor: "pointer" }} />
       <FaUser
         style={{ fontSize: "24px", cursor: "pointer" }}

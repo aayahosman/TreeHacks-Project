@@ -32,7 +32,7 @@ const Login = () => {
      {/* Right Side - Illustration */}
      <div className={styles.illustrationSection}>
        <img
-         src="https://via.placeholder.com/300"
+         src="images/logo.png"
          alt="Illustration"
          className={styles.illustration}
        />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../SignUp.css"; 
+import NavBar from "./NavBar";
 
 const SignUp = () => {
     const [name, setName] = useState("");
@@ -9,6 +10,7 @@ const SignUp = () => {
 
     return (
         <div className="container">
+            <NavBar/>
             <div className="content-wrapper">
                 <div className="input-section">
                     <h1 className="heading">My name is...</h1>

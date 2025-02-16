@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import "../InterestedIn.css"; // Import CSS
+import NavBar from "./NavBar";
 
 const InterestedIn = () => {
     const [query, setQuery] = useState("");
@@ -9,6 +10,7 @@ const InterestedIn = () => {
 
     return (
         <div className="interested-container">
+            <NavBar />
             {/* Heading */}
             <h1 className="interested-heading">I’m interested in...</h1>
 
@@ -23,7 +25,7 @@ const InterestedIn = () => {
                 />
                 <FaAngleDoubleRight 
                     className="submit-icon" 
-                    onClick={() => navigate("/next-page")} 
+                    onClick={() => navigate("/swipe-match")} 
                 />
             </div>
 

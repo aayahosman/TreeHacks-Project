@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "name": "Alice",
+        "preference": "Music",
+        "bio": "Loves playing the guitar and singing.",
+        "image": "https://#"
+    },
+    {
+        "id": 2,
+        "name": "Bob",
+        "preference": "Sports",
+        "bio": "Avid basketball player and fitness enthusiast.",
+        "image": "https://#"
+    },
+    {
+        "id": 3,
+        "name": "Charlie",
+        "preference": "Travel",
+        "bio": "Exploring new places and cultures is my passion.",
+        "image": "https://#"
+    },
+    {
+        "id": 4,
+        "name": "Violet",
+        "preference": "Travel",
+        "bio": "Let's go on an adventure together!",
+        "image": "https://#"
+    }
+]
+    

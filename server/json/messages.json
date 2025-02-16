@@ -1,0 +1,17 @@
+[
+    {
+      "matchId": 1,
+      "senderId": 1,
+      "receiverId": 3,
+      "content": "Hey, how's your day going?",
+      "createdAt": "2025-02-15T10:20:00Z"
+    },
+    {
+      "matchId": 1,
+      "senderId": 3,
+      "receiverId": 1,
+      "content": "Good, just finished work. How about you?",
+      "createdAt": "2025-02-15T10:25:00Z"
+    }
+  ]
+  

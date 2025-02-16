@@ -1,0 +1,14 @@
+[
+  {
+    "userId": 4,
+    "profileId": 3,
+    "preference": "Travel",
+    "createdAt": "2025-02-16T05:57:04.219Z"
+  },
+  {
+    "userId": 3,
+    "profileId": 4,
+    "preference": "Travel",
+    "createdAt": "2025-02-16T05:57:04.220Z"
+  }
+]

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import "../LookingFor.css"; // Import CSS
+import NavBar from "./NavBar";
 
 const LookingFor = () => {
     const [query, setQuery] = useState("");
@@ -9,6 +10,7 @@ const LookingFor = () => {
 
     return (
         <div className="looking-container">
+            <NavBar />
             {/* Heading */}
             <h1 className="looking-heading">I’m looking for...</h1>
 

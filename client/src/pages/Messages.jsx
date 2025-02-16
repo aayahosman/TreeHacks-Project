@@ -9,8 +9,8 @@ const Messages = () => {
   };
 
   return (
-    <div className="flex h-screen w-full bg-white">
-      {/* Left Sidebar */}
+    <div className="flex h-screen w-screen bg-white">
+  {/* Left Sidebar */}
       <aside className="w-[300px] border-r border-gray-200 bg-white">
         <div className="p-4">
           <h2 className="mb-4 text-xl font-semibold">Message</h2>
@@ -27,14 +27,14 @@ const Messages = () => {
 
           {/* Friends List */}
           <div className="space-y-2">
-            {["Kris", "Kitty", "Eleanor"].map((friend) => (
+            {["Alice", "Bob", "Charlie"].map((friend) => (
               <div
                 key={friend}
                 onClick={() => handleProfileClick(friend)}
                 className="flex cursor-pointer items-center gap-3 rounded-lg p-2 hover:bg-purple-100"
               >
                 <img
-                  src="/api/placeholder/40/40"
+                  src="images/pfp.png"
                   alt={friend}
                   className="h-10 w-10 rounded-full"
                 />
@@ -55,12 +55,12 @@ const Messages = () => {
         {/* Chat Header */}
         <div className="flex items-center border-b border-gray-200 p-4">
           <img
-            src="/api/placeholder/40/40"
+            src="images/cat1.png"
             alt="Profile"
             className="h-10 w-10 rounded-full"
           />
           <div className="ml-3">
-            <h3 className="font-medium">Kris</h3>
+            <h3 className="font-medium">Alice</h3>
             <p className="text-sm text-gray-500">Online 7m ago</p>
           </div>
         </div>
@@ -124,7 +124,7 @@ const Messages = () => {
         <aside className="w-[300px] border-l border-gray-200 bg-white p-4">
           <div className="flex flex-col items-center">
             <img
-              src="/api/placeholder/80/80"
+              src="images/pfp.png"
               alt={selectedProfile}
               className="mb-4 h-20 w-20 rounded-full"
             />
@@ -138,7 +138,7 @@ const Messages = () => {
               
               <div>
                 <p className="text-sm text-gray-500">Phone number</p>
-                <p className="font-medium">(123) 456-7899</p>
+                <p className="font-medium">(123) 456-7890</p>
               </div>
 
               <div className="space-y-2">

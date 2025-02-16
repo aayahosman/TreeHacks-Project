@@ -29,13 +29,12 @@ const LookingFor = () => {
 
             {/* Options */}
             <div className="options-container">
-                <button className="option-button">friend</button>
-                <button className="option-button">mentor</button>
-                <button className="option-button">coffee?</button>
+                <button className="option-button" onClick={() => setQuery("friend")}>friend</button>
+                <button className="option-button" onClick={() => setQuery("mentor")}>mentor</button>
+                <button className="option-button" onClick={() => setQuery("mentee")}>mentee</button>
             </div>
         </div>
     );
 };
 
 export default LookingFor;
-

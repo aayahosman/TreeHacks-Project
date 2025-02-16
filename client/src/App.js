@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/messages" element={<Messages />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/lookingfor" element={<LookingFor />} />
+          <Route path="/profile/lookingfor" element={<LookingFor />} />
           <Route path="/swipe-match" element={<SwipeMatch />} />
         </Routes>
     </div>

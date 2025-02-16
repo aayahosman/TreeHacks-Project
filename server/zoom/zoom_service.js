@@ -41,7 +41,7 @@ export const generateZoomMeeting = async (topic) => {
             },
             body: JSON.stringify({
                 topic,
-                type: 2, // Scheduled meeting
+                type: 1, // 2. Scheduled meeting, 1. Instant meeting
                 start_time: new Date().toISOString(),
                 duration: 60,
                 timezone: 'America/Los_Angeles',

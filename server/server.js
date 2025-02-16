@@ -1,20 +1,11 @@
-require('dotenv').config();
-console.log("MONGO_URI from .env:", process.env.MONGO_URI); // Debugging line
-const express = require('express');
-const connectDB = require('./config/db'); 
+import 'dotenv/config';
+import { connectDB } from './config/db.js';
+import app from './app.js'; // Import the app from app.js
 
-const app = express();
-app.use(express.json());
-
-// Connect to MongoDB
+// ✅ Connect to MongoDB
 connectDB();
 
-app.get('/', (req, res) => {
-    res.send('Server is running!');
-});
-
-app.use('/api/users', require('./routes/userroutes'));
-app.use('/api/swipes', require('./routes/swiperoutes'));
-
+// ✅ Start Express Server
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+

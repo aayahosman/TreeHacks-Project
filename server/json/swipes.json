@@ -1,0 +1,32 @@
+[
+    {
+        "userId": 1,
+        "profileId": 2,
+        "direction": "right",
+        "createdAt": "2025-02-15T10:00:00Z"
+    },
+    {
+        "userId": 2,
+        "profileId": 1,
+        "direction": "left",
+        "createdAt": "2025-02-15T10:05:00Z"
+    },
+    {
+        "userId": 1,
+        "profileId": 3,
+        "direction": "right",
+        "createdAt": "2025-02-15T10:10:00Z"
+    },
+    {
+        "userId": 4,
+        "profileId": 3,
+        "direction": "right",
+        "createdAt": "2025-02-15T10:10:00Z"
+    },
+    {
+    "userId": 3,
+    "profileId": 4,
+    "direction": "right",
+    "createdAt": "2025-02-15T11:10:00Z"
+    }
+    ]

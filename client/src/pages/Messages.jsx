@@ -69,31 +69,31 @@ const Messages = () => {
         <div className="flex-1 space-y-4 overflow-y-auto p-4">
           <div className="flex">
             <div className="max-w-[70%] rounded-2xl bg-purple-100 px-4 py-2">
-              Hey bro!
+            Hey, I just found an amazing mentorship program on ConnectHer!
             </div>
           </div>
 
           <div className="flex justify-end">
             <div className="max-w-[70%] rounded-2xl bg-gray-100 px-4 py-2">
-              What sup?
+            That’s awesome! What kind of mentorship are you looking for?
             </div>
           </div>
 
           <div className="flex">
             <div className="max-w-[70%] rounded-2xl bg-purple-100 px-4 py-2">
-              Lately I'm learning about an art style called Retro
+            I’m interested in tech! Looking for someone who can guide me in software development.
             </div>
           </div>
 
           <div className="flex">
             <div className="max-w-[70%] rounded-2xl bg-purple-100 px-4 py-2">
-              While the main vintage color tones are deep, warm colors, the Retro style is more colorful when the main color tones are pastel.
+            ConnectHer has a whole section on that! I saw a webinar on frontend development happening next week.
             </div>
           </div>
 
           <div className="flex justify-end">
             <div className="max-w-[70%] rounded-2xl bg-gray-100 px-4 py-2">
-              Wow, look great!
+            That sounds great! I’ll check it out. Thanks for the recommendation!
             </div>
           </div>
 

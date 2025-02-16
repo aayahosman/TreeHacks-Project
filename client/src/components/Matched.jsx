@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/match.css';
+import Navbar from "./NavBar";
 
 function Match() {
     const navigate = useNavigate();
@@ -43,6 +44,7 @@ function Match() {
 
     return (
         <div className="match-container">
+            <Navbar/>
             {showTitle && (
                 <>
                     <h1 className="cute-title">YAY! 🎉</h1>

@@ -1,115 +1,157 @@
-import React from "react";
-import styles from "../Messages.module.css"; 
-import { FaSearch } from "react-icons/fa"; // Import search icon
+import React, { useState } from "react";
+import { Search } from "lucide-react";
 
 const Messages = () => {
+  const [selectedProfile, setSelectedProfile] = useState(null);
+
+  const handleProfileClick = (profile) => {
+    setSelectedProfile(profile);
+  };
+
   return (
-    <div className={styles.messagesContainer}>
-      {/* Sidebar with Friends List */}
-      <aside className={styles.sidebar}>
-        <h2 className={styles.sidebarTitle}>Message</h2>
-        <div className={styles.searchBox}>
-          <FaSearch className={styles.searchIcon} />
-          <input type="text" placeholder="Search" />
-        </div>
+    <div className="flex h-screen w-full bg-white">
+      {/* Left Sidebar */}
+      <aside className="w-[300px] border-r border-gray-200 bg-white">
+        <div className="p-4">
+          <h2 className="mb-4 text-xl font-semibold">Message</h2>
+          
+          {/* Search */}
+          <div className="mb-6 flex items-center rounded-full bg-purple-100 px-4 py-2">
+            <Search className="h-5 w-5 text-gray-500" />
+            <input 
+              type="text" 
+              placeholder="Search" 
+              className="ml-2 w-full bg-transparent outline-none"
+            />
+          </div>
 
-        {/* Friends List */}
-        <ul className={styles.friendsList}>
-          <li className={`${styles.friend} ${styles.active}`}>
-            <img src="https://via.placeholder.com/40" alt="Kris" />
-            <div className={styles.friendInfo}>
-              <h3>Kris</h3>
-              <p>Hey, have you noticed how much...</p>
-            </div>
-          </li>
-          <li className={styles.friend}>
-            <img src="https://via.placeholder.com/40" alt="Kitty" />
-            <div className={styles.friendInfo}>
-              <h3>Kitty</h3>
-              <p>Absolutely! It’s fascinating how p...</p>
-            </div>
-          </li>
-          <li className={styles.friend}>
-            <img src="https://via.placeholder.com/40" alt="Eleanor" />
-            <div className={styles.friendInfo}>
-              <h3>Eleanor</h3>
-              <p>Hey, have you noticed how...</p>
-            </div>
-          </li>
-        </ul>
+          {/* Friends List */}
+          <div className="space-y-2">
+            {["Kris", "Kitty", "Eleanor"].map((friend) => (
+              <div
+                key={friend}
+                onClick={() => handleProfileClick(friend)}
+                className="flex cursor-pointer items-center gap-3 rounded-lg p-2 hover:bg-purple-100"
+              >
+                <img
+                  src="/api/placeholder/40/40"
+                  alt={friend}
+                  className="h-10 w-10 rounded-full"
+                />
+                <div>
+                  <h3 className="font-medium">{friend}</h3>
+                  <p className="text-sm text-gray-500 line-clamp-1">
+                    Hey, have you noticed how much...
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </aside>
 
-      {/* Chat Section */}
-      <section className={styles.chatSection}>
-        <div className={styles.chatHeader}>
-          <img src="https://via.placeholder.com/40" alt="Kris" />
-          <h3>Kris</h3>
-          <p className={styles.status}>Online 7m ago</p>
+      {/* Main Chat Area */}
+      <main className="flex flex-1 flex-col">
+        {/* Chat Header */}
+        <div className="flex items-center border-b border-gray-200 p-4">
+          <img
+            src="/api/placeholder/40/40"
+            alt="Profile"
+            className="h-10 w-10 rounded-full"
+          />
+          <div className="ml-3">
+            <h3 className="font-medium">Kris</h3>
+            <p className="text-sm text-gray-500">Online 7m ago</p>
+          </div>
         </div>
 
-        <div className={styles.chatWindow}>
-          <div className={`${styles.message} ${styles.received}`}>
-            <span className={styles.messageText}>Hey bro!</span>
+        {/* Messages */}
+        <div className="flex-1 space-y-4 overflow-y-auto p-4">
+          <div className="flex">
+            <div className="max-w-[70%] rounded-2xl bg-purple-100 px-4 py-2">
+              Hey bro!
+            </div>
           </div>
 
-          <div className={`${styles.message} ${styles.sent}`}>
-            <span className={styles.messageText}>What sup?</span>
+          <div className="flex justify-end">
+            <div className="max-w-[70%] rounded-2xl bg-gray-100 px-4 py-2">
+              What sup?
+            </div>
           </div>
 
-          <div className={`${styles.message} ${styles.received}`}>
-            <span className={styles.messageText}>
+          <div className="flex">
+            <div className="max-w-[70%] rounded-2xl bg-purple-100 px-4 py-2">
               Lately I'm learning about an art style called Retro
-            </span>
+            </div>
           </div>
 
-          <div className={`${styles.message} ${styles.received} ${styles.large}`}>
-            <span className={styles.messageText}>
+          <div className="flex">
+            <div className="max-w-[70%] rounded-2xl bg-purple-100 px-4 py-2">
               While the main vintage color tones are deep, warm colors, the Retro style is more colorful when the main color tones are pastel.
-            </span>
+            </div>
           </div>
 
-          <div className={`${styles.message} ${styles.sent}`}>
-            <span className={styles.messageText}>Wow, look great!</span>
+          <div className="flex justify-end">
+            <div className="max-w-[70%] rounded-2xl bg-gray-100 px-4 py-2">
+              Wow, look great!
+            </div>
           </div>
 
-          <div className={`${styles.message} ${styles.sent} ${styles.audio}`}>
-            <span className={styles.audioWaveform}>🔊🎵</span>
+          <div className="flex justify-end">
+            <div className="max-w-[70%] rounded-2xl bg-gray-100 px-4 py-2">
+              🔊 Audio Message
+            </div>
           </div>
         </div>
 
-        {/* Chat Input */}
-        <div className={styles.chatInput}>
-          <input type="text" placeholder="Type a message..." />
-          <button className={styles.sendBtn}>Send</button>
+        {/* Input Area */}
+        <div className="border-t border-gray-200 p-4">
+          <div className="flex gap-2">
+            <input
+              type="text"
+              placeholder="Type a message..."
+              className="flex-1 rounded-full border border-gray-200 px-4 py-2 outline-none focus:border-purple-300"
+            />
+            <button className="rounded-full bg-purple-100 px-6 py-2 font-medium hover:bg-purple-200">
+              Send
+            </button>
+          </div>
         </div>
-      </section>
+      </main>
 
-      {/* User Info Section */}
-      <aside className={styles.userInfo}>
-        <img className={styles.userAvatar} src="https://via.placeholder.com/80" alt="Kris" />
-        <h3 className={styles.userName}>kris</h3>
-        <p className={styles.userEmail}>
-          Email<br />Kris@gmail.com
-        </p>
-        <p className={styles.userPhone}>
-          Phone Number<br />(123) 456-7899
-        </p>
+      {/* Right Sidebar */}
+      {selectedProfile && (
+        <aside className="w-[300px] border-l border-gray-200 bg-white p-4">
+          <div className="flex flex-col items-center">
+            <img
+              src="/api/placeholder/80/80"
+              alt={selectedProfile}
+              className="mb-4 h-20 w-20 rounded-full"
+            />
+            <h3 className="mb-1 text-lg font-medium">{selectedProfile}</h3>
+            
+            <div className="mt-6 w-full space-y-4">
+              <div>
+                <p className="text-sm text-gray-500">Email</p>
+                <p className="font-medium">{selectedProfile.toLowerCase()}@gmail.com</p>
+              </div>
+              
+              <div>
+                <p className="text-sm text-gray-500">Phone number</p>
+                <p className="font-medium">(123) 456-7899</p>
+              </div>
 
-        <div className={styles.userOptions}>
-          <details>
-            <summary>Information</summary>
-          </details>
-          <details>
-            <summary>Chat Setting</summary>
-          </details>
-          <details>
-            <summary>File, Attachments</summary>
-          </details>
-          <details>
-            <summary>Link</summary>
-          </details>
-        </div>
-      </aside>
+              <div className="space-y-2">
+                {["Information", "Chat setting", "File, Attachments", "Link"].map((option) => (
+                  <details key={option} className="cursor-pointer">
+                    <summary className="py-1 font-medium">{option}</summary>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        </aside>
+      )}
     </div>
   );
 };

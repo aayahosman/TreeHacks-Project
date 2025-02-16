@@ -1,9 +1,9 @@
-/* Reset Global Centering ONLY for Messages Page */
+/* Ensure three proper columns */
 .messages-container {
-    display: flex !important; /* Force correct flexbox layout */
+    display: flex !important;
     flex-direction: row;
-    align-items: stretch; /* Prevents centering */
-    justify-content: space-between; /* Ensures proper spacing */
+    align-items: stretch;
+    justify-content: space-between;
     height: 100vh;
     width: 100vw;
     background: #fff;
@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     border-right: 2px solid #ddd;
+    overflow-y: auto;
   }
   
   .sidebar-title {
@@ -101,7 +102,7 @@
   .chat-window {
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* ✅ Stack messages vertically */
     padding: 15px;
     overflow-y: auto;
     gap: 10px;
@@ -109,11 +110,12 @@
   
   /* MESSAGES */
   .message {
-    max-width: 60%;
-    padding: 12px 18px;
+    max-width: 55%; /* ✅ Ensure uniform width */
+    padding: 12px 16px;
     border-radius: 20px;
     font-size: 1rem;
     word-wrap: break-word;
+    line-height: 1.4;
   }
   
   /* Align received messages to the left */
@@ -130,9 +132,9 @@
     text-align: right;
   }
   
-  /* Large messages take up more space */
+  /* FIX LONG MESSAGE BUBBLES */
   .message.large {
-    max-width: 75%;
+    max-width: 55% !important; /* ✅ Prevent extra-long bubbles */
   }
   
   /* CHAT INPUT */

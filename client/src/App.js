@@ -6,6 +6,7 @@ import Login from "./components/Login.jsx";
 import Profile from "./pages/SignUp";
 import profilesData from "./json/profiles.json";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Messages from "./pages/Messages";
 
 const App = () => {
   const [profilesQueue, setProfilesQueue] = useState(profilesData);
@@ -22,6 +23,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />}></Route>
           <Route path="/profile" element={<Profile />} />
+          <Route path="/messages" element={<Messages />} />
           <Route path="/login" element={<Login />} />
           <Route path="/swipe-match" element={<SwipeMatch />} />
         </Routes>

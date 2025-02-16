@@ -1,15 +1,7 @@
-/* New home container styling */
-/* .home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-} */
-
-/* Existing styles */
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Reset and Global Styling */
 * {
   margin: 0;
   padding: 0;
@@ -17,147 +9,182 @@
   font-family: Figtree, sans-serif;
 }
 
-body {
-  background-color: #e0e0e0;
-  color: #333;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* home */
-/* .header {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
+body, html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-} */
+  background: linear-gradient(180deg, #fce3ff 30%, #ffe6e6 70%);
+}
 
+/* ✅ Center Home Page */
+.home-container {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #fce3ff 30%, #ffe6e6 70%);
+}
+
+/* ✅ Center Swipe Match Page */
+.swipe-container {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fce3ff 30%, #ffe6e6 70%);
+}
+
+/* Navigation Bar */
 .navbar {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   align-items: center;
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #F3BDFF;
-  padding: 10px 20px;
+  background-color: #f3bdff;
+  padding: 12px 24px;
   border-radius: 999px;
   gap: 40px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   z-index: 999;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
-.navbar h1 {
-  font-size: 120px; /* Increased font size */
-  margin-right: 100px;
-}
-
-.navbar h3 {
-  font-size: 40px; /* Increased font size */
-}
-
-.home-btn {
-  background-color: #F3BDFF;
-  color: black;
-  padding: 10px 20px;
-  border: solid 1px black;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 20px auto; /* Centers the button */
-  display: block; /* Ensures margin auto works for centering */
-  font-size: 15px; /* Makes the button text bigger */
-}
-
-/* serachbar page */
-/* SearchBar.css */
-.searchbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  background-color: #f5f5f5;
-  padding: 8px 12px;
-  border-radius: 20px;
-  flex-grow: 1;
-  margin-right: 20px;
-}
-
-.search-input {
+.navbar button {
+  background: none;
   border: none;
-  outline: none;
-  background-color: transparent;
-  font-size: 16px;
-  width: 100%;
-}
-
-.search-input::placeholder {
-  color: #888;
-}
-
-.icons-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.icon {
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
-  color: #333;
+  color: black;
+  transition: transform 0.2s ease-in-out;
 }
 
-.icon:hover {
-  color: #007bff; /* Change color on hover */
+.navbar button:hover {
+  transform: scale(1.1);
 }
 
-/* swiping */
-.container {
+/* Home Content */
+.home-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background-color: #f5f5f5;
+  width: 100vw;
+  text-align: center;
+}
+
+/* Home Title - Bigger & More Impactful */
+.home-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+/* Home Subtitle (Tagline) - More Readable */
+.home-subtitle {
+  font-size: 1.8rem;
+  max-width: 600px;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+/* Home Button */
+.home-btn {
+  background: #f3bdff;
+  color: black;
+  padding: 14px 28px;
+  border: solid 2px black;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 4px 0px black;
+}
+
+.home-btn:hover {
+  background: #d9a3e5;
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 0px black;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #444;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Swipe Cards */
+.card-stack {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
-  width: 300px;
-  height: 400px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-.card img {
+/* Top Card is Draggable */
+.top-card {
+  z-index: 2;
+}
+
+/* Other Cards Stay Behind */
+.behind-card {
+  transform: scale(0.92);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Profile Image */
+.profile-img {
   width: 100%;
-  height: 80%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  height: 65%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card h2 {
-  margin: 10px;
+/* No More Profiles Message */
+.no-more {
+  font-size: 1.5rem;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
 }

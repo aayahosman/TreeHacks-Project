@@ -16,14 +16,13 @@ const App = () => {
     <BrowserRouter>
     <div className="container">
         <Routes>
-          <Route index element={<Matched />} />
+          <Route index element={<Home />} />
           <Route path="/home" element={<Home />}></Route>
           <Route path="/profile" element={<Profile />} />
           <Route path="/messages" element={<Messages />} />
           <Route path="/login" element={<Login />} />
           <Route path="/lookingfor" element={<LookingFor />} />
           <Route path="/swipe-match" element={<SwipeMatch />} />
-          {/* <Route path="/zoom-meeting" element={<ZoomMeeting />} /> */}
         </Routes>
     </div>
     </BrowserRouter>

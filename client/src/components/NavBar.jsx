@@ -14,7 +14,7 @@
 
 // export default NavBar;
 import React from "react";
-import { FaCommentDots, FaBell, FaUser, FaQuestionCircle } from "react-icons/fa";
+import { FaCommentDots, FaBell, FaUser, FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
@@ -24,13 +24,12 @@ function NavBar() {
     <nav className="navbar">
       <FaCommentDots style={{ fontSize: "24px", cursor: "pointer" }} onClick={() => navigate("/messages")}/>
       <FaBell style={{ fontSize: "24px", cursor: "pointer" }} 
-      onClick={() => navigate("/profile")}/>
+      onClick={() => navigate("/community")}/>
       <FaUser
         style={{ fontSize: "24px", cursor: "pointer" }}
         onClick={() => navigate("/profile")} // Navigate to profile page
       />
-      <FaQuestionCircle style={{ fontSize: "24px", cursor: "pointer" }} 
-      onClick={() => navigate("/profile")}/>
+      <FaArrowLeft style={{ fontSize: "24px", cursor: "pointer" }} onClick={() => window.history.back()}/>
     </nav>
   );
 }

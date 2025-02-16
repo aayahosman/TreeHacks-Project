@@ -52,7 +52,7 @@ function Match() {
 
             {loading ? (
                 <div className="loading-screen">
-                    <p className="loading-text">We’re setting up something magical for you... ⏳✨</p>
+                    <p className="loading-text">We’re looking at your schedule and setting up a meeting... ⏳✨</p>
                     {showLoader && <div className="cute-spinner"></div>}
                 </div>
             ) : meetingLink ? (
@@ -68,7 +68,7 @@ function Match() {
             ) : (
                 <div className="button-container">
                     <button className="message-btn" onClick={() => navigate('/messages')}>💌 Message?</button>
-                    <button className="meeting-btn" onClick={createMeeting}>📅 Send me a meeting!</button>
+                    <button className="meeting-btn" onClick={createMeeting}>📅 Schedule a meeting!</button>
                 </div>
             )}
         </div>

@@ -23,12 +23,14 @@ function NavBar() {
   return (
     <nav className="navbar">
       <FaCommentDots style={{ fontSize: "24px", cursor: "pointer" }} onClick={() => navigate("/messages")}/>
-      <FaBell style={{ fontSize: "24px", cursor: "pointer" }} />
+      <FaBell style={{ fontSize: "24px", cursor: "pointer" }} 
+      onClick={() => navigate("/profile")}/>
       <FaUser
         style={{ fontSize: "24px", cursor: "pointer" }}
         onClick={() => navigate("/profile")} // Navigate to profile page
       />
-      <FaQuestionCircle style={{ fontSize: "24px", cursor: "pointer" }} />
+      <FaQuestionCircle style={{ fontSize: "24px", cursor: "pointer" }} 
+      onClick={() => navigate("/profile")}/>
     </nav>
   );
 }

@@ -23,7 +23,7 @@ const LookingFor = () => {
                 />
                 <FaAngleDoubleRight 
                     className="submit-icon" 
-                    onClick={() => navigate("/next-page")} 
+                    onClick={() => navigate("/InterestedIn")} 
                 />
             </div>
 

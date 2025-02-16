@@ -1,75 +1,47 @@
 // models/profile.js (Hardcoded version)
 const profiles = [
     {
-        id: 1,
-        name: "Alice",
-        preference: "Computer Science",
-        bio: "Loves playing the guitar and singing.",
-        image: "https://#"
+      id: 1,
+      name: "Alice",
+      preference: "Music",
+      bio: "Loves playing the guitar and singing.",
+      image: "images/cat1.png"
     },
     {
-        id: 2,
-        name: "Bob",
-        preference: "Sports",
-        bio: "Avid basketball player and fitness enthusiast.",
-        image: "https://#"
+      id: 2,
+      name: "Rachel",
+      preference: "Music",
+      bio: "Avid basketball player and fitness enthusiast.",
+      image: "images/cat2.png"
     },
     {
-        id: 3,
-        name: "Charlie",
-        preference: "Computer Science",
-        bio: "I like to study and listen to the orchestra.",
-        image: "https://#"
+      id: 3,
+      name: "Jessica",
+      preference: "Mathematics",
+      bio: "Exploring new places and cultures is my passion.",
+      image: "images/cat3.png"
     },
     {
         id: 4,
-        name: "Sarah",
+        name: "Shelly",
         preference: "Computer Science",
-        bio: "I want to be a vet one day and work at an aquarium.",
-        image: "https://#"
-    },
-    {
+        bio: "I really like to run.",
+        image: "images/cat3.png"
+      },
+      {
         id: 5,
-        name: "Michael",
-        preference: "Travel",
-        bio: "I am a big science person and love anything STEM related.",
-        image: "https://#"
-    },
-    {
+        name: "Kelly",
+        preference: "Computer Science",
+        bio: "I love to eat veggies.",
+        image: "images/cat3.png"
+      },
+      {
         id: 6,
-        name: "Kyle",
-        preference: "Travel",
-        bio: "Exploring new places and cultures is my passion.",
-        image: "https://#"
-    },
-    {
-        id: 7,
-        name: "Steven",
+        name: "Claire",
         preference: "Computer Science",
-        bio: "I like sleeping after a long day.",
-        image: "https://#"
-    },
-    {
-        id: 8,
-        name: "Rachel",
-        preference: "Travel",
-        bio: "Knitting and crocheting are a few of my hobbies.",
-        image: "https://#"
-    },
-    {
-        id: 9,
-        name: "Walter",
-        preference: "Travel",
-        bio: "I really like stargazing and space!",
-        image: "https://#"
-    },
-    {
-        id: 10,
-        name: "Jane",
-        preference: "Computer Science",
-        bio: "I like to run outdoors and feel the winter breeze.",
-        image: "https://#"
-    }
-];
+        bio: "Hiking is my favorite hobby!",
+        image: "images/cat3.png"
+      }
+  ]
 
 module.exports = profiles;

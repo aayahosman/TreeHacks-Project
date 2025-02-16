@@ -8,6 +8,14 @@ const InterestedIn = () => {
     const [query, setQuery] = useState("");
     const navigate = useNavigate();
 
+    const handleNavigate = () => {
+        if (query) {
+            navigate("/swipe-match", { state: { preference: query } });
+        } else {
+            alert("Please enter a valid interest.");
+        }
+    };
+
     return (
         <div className="interested-container">
             <NavBar />
@@ -25,7 +33,7 @@ const InterestedIn = () => {
                 />
                 <FaAngleDoubleRight 
                     className="submit-icon" 
-                    onClick={() => navigate("/swipe-match")} 
+                    onClick={handleNavigate} 
                 />
             </div>
 
@@ -45,3 +53,4 @@ const InterestedIn = () => {
 };
 
 export default InterestedIn;
+

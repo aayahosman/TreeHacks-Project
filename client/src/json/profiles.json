@@ -23,22 +23,22 @@
     {
         "id": 4,
         "name": "Steven",
-        "preference": "Computer Science",
-        "bio": "Exploring new places and cultures is my passion.",
+        "preference": "Technology",
+        "bio": "I really like to run and go outside.",
         "image": "images/cat3.png"
       },
       {
         "id": 5,
         "name": "Kyle",
-        "preference": "Computer Science",
-        "bio": "Exploring new places and cultures is my passion.",
+        "preference": "Technology",
+        "bio": "I love to be healthy and eat vegetables.",
         "image": "images/cat3.png"
       },
       {
         "id": 6,
         "name": "Michael",
-        "preference": "Computer Science",
-        "bio": "Exploring new places and cultures is my passion.",
+        "preference": "Technology",
+        "bio": "Hiking is my favorite hobby.",
         "image": "images/cat3.png"
       }
   ]

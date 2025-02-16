@@ -1,14 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom"; 
 import SwipeCard from "./SwipeCard";
-import profilesData from "../json/profiles.json";
+import { useLocation } from "react-router-dom";
 import "../App.css";
 import NavBar from "./NavBar";
 
 const SwipeMatch = () => {
-  const [profilesQueue, setProfilesQueue] = useState(profilesData);
+  const [profilesQueue, setProfilesQueue] = useState([]);
+  const location = useLocation(); // Access the state passed from the InterestedIn page
+  const userPreference = location.state?.preference || "Technology"; // Default to "Technology" if no preference
   const navigate = useNavigate();
+
+  // Fetch profiles when the component mounts
+  useEffect(() => {
+    async function fetchProfiles() {
+      try {
+        const response = await fetch(`http://localhost:5001/profiles?preference=${userPreference}`);
+        const data = await response.json();
+
+        console.log("Fetched profiles:", data);
+        
+        setProfilesQueue(data); //this should set the data to the queue???
+      } catch (error) {
+        console.error("Error fetching profiles:", error);
+      }
+    }
+
+    fetchProfiles();
+  }, []); // The empty array ensures this effect runs only once on mount
 
   const handleSwipe = (id, direction) => {
     console.log(`${profilesQueue[0]?.name} swiped ${direction}`);
@@ -47,3 +67,4 @@ const SwipeMatch = () => {
 };
 
 export default SwipeMatch;
+
